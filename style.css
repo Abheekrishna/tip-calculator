@@ -7,7 +7,7 @@
     display: grid;
     place-content: center;
     background: linear-gradient(90deg, rgba(37,75,223,1) 0%, rgba(0,176,222,1) 100%);
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
 }
 .calculatorBody {
@@ -34,7 +34,7 @@
 }
 .total-container {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 1fr;
 }
 #totalAmountPerPerson {
     text-align: right;
@@ -92,10 +92,64 @@
 }
 
 footer {
-    margin-top: 150px;
+    position: fixed;
+    left: 0;
+    bottom: 3%;
+    width: 100%;
     text-align: center;
     color: white;
 }
 footer a {
     color: white;
+}
+
+
+/* For Mobile */
+
+@media screen and (max-width: 400px) {
+    .container {
+        padding: 0 30px;
+    }
+    #billTotal, #tipPercentage {
+        padding-top: 7px;
+        padding-bottom: 7px;
+        padding-right: 20px;
+        padding-left: 10px;
+        font-size: 0.2rem;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .container {
+        padding: 0 30px;
+    }
+    #billTotal, #tipPercentage {
+        padding-top: 7px;
+        padding-bottom: 7px;
+        padding-right: 40px;
+        padding-left: 10px;
+        font-size: 0.9rem;
+    }
+    #plus, #minus {
+        padding: 5px 7.5px;
+        font-size: 0.8rem;
+        margin-top: 10px;
+    }
+    .total-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 0px;
+    }
+}
+
+
+/* Tablet */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 0 0px;
+    }
+    .total-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 0px;
+    }
 }
