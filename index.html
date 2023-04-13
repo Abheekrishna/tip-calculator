@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator | Abhee Krishna</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="calculatorBody">
+            <div class="input-sec">
+                <label for="billTotal">Bill total</label>
+                <input type="text" name="" id="billTotal" placeholder="$100" onkeyup="calculateBill()">
+            </div><!--input sec closing tag-->
+
+            <div class="input-sec">
+                <label for="tipPercentage">Tip percentage %</label>
+                <input type="text" name="" id="tipPercentage" placeholder="10%" onkeyup="calculateBill()">
+             </div><!--input sec closing tag-->
+
+             <div class="total-container">
+             <div class="increase-decrease">
+                <span class="num-people">People</span>
+                <div class="increase-decrease-sec">
+                    <button id="plus" onclick="increasePeople()">+</button>
+                    <span id="numberOfPeople">1</span>
+                    <button id="minus" onclick="decreasePeople()">-</button>
+                </div>
+                </div>
+                    <div class="total-amount">
+                        <p class="total-title">Total per person</p>
+                        <h2 id="totalAmountPerPerson"></h2>
+                     </div>
+            </div>
+
+
+
+
+        </div><!--calculatorBody closing tag-->
+    </div><!--Container Closing Tag-->
+
+    <script src="app.js"></script>
+</body>
+</html>
