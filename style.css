@@ -6,21 +6,31 @@
 .container {
     display: grid;
     place-content: center;
-    margin-top: 100px;
+    background: linear-gradient(90deg, rgba(37,75,223,1) 0%, rgba(0,176,222,1) 100%);
+    height: 100vh;
+    margin: 0;
 }
 .calculatorBody {
-    padding: 20px;
+    padding: 0 50px;
+    padding-top: 80px;
+    padding-bottom: 150px;
+    background-color: #232323;
+    color: white;
+    border: none;
+    border-radius: 15px;
 }
 .input-sec {
     display: flex;
     flex-direction: column;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
 }
 .input-sec label {
     margin-bottom: 8px;
+    font-size: 1.1rem;
+    color: rgb(213, 213, 213);
 }
-.num-people {
-    font-size: 0.8rem;
+.num-people, .total-title {
+    font-size: 0.9rem;
 }
 .total-container {
     display: grid;
@@ -32,4 +42,60 @@
 .total-title {
     font-size: 0.8rem;
     text-align: right;
+}
+#billTotal, #tipPercentage {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 80px;
+    padding-left: 15px;
+    font-size: 1.1rem;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+#billTotal:focus, #tipPercentage:focus {
+    border: 1px solid rgba(37,75,223,1);
+}
+#billTotal::placeholder, #tipPercentage::placeholder {
+    color: rgb(132, 132, 132);
+}
+#plus, #minus {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+    text-align: center;
+    background: rgb(37, 118, 223);
+    border: none;
+    color: white;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: all 0.2s ;
+}
+#plus {
+    margin-right: 10px;
+}
+#minus {
+    margin-left: 10px;
+}
+
+#plus:active, #minus:active {
+    transform: scale(0.9);
+}
+
+#numberOfPeople {
+    font-size: 1.2rem
+}
+#totalAmountPerPerson {
+    margin-top: 10px;
+    font-size: 1.6rem;
+}
+
+footer {
+    margin-top: 150px;
+    text-align: center;
+    color: white;
+}
+footer a {
+    color: white;
 }
